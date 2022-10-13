@@ -1,0 +1,206 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+.sidebar1{
+  min-height: 100%;
+  width: 20%;
+  background-color: #f5f5f5;
+  display: inline-block;
+  margin-left: 0;
+}
+.main-content{
+  min-height: 100%;
+  width: 80%;
+  background-color: green;
+  margin-right: 0;
+  display: inline-block;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #e24886;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .main {
+    padding-right: 30px;
+    padding-left: 100px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+.col-sm-offset-3 {
+    margin-left: 15% !important;
+  }
+.margin_top_only2{
+  margin-top: 150px;
+}
+.hamburger{
+  width: 30px;
+  height: 30px;
+  background-color: #e24886;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 15px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+.navbar{
+    margin-bottom: 0px !important;
+    border: none !important;
+    background-color: #fff !important;
+    box-shadow: 0 0 5px 0 #e24886;
+}
+
+  .pic-logo_admin{
+    margin-top: -10px;
+    width: 200px;
+  }
+  .navbar-inverse .navbar-nav>li>a {
+    color: #43476f;
+  }
+  .navbar-inverse .navbar-nav>li>a:hover {
+    color: #e24886 !important;
+  }
+  a {
+    color: #43476f !important;
+}
+.nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+    color: #fff !important;
+  }
+  .navbar-toggle {
+    background-color: #6b6b6b !important;
+}
+.sidebar{
+  /*width: 200px !important;*/
+}
+#sidebar{
+        width: 240px;
+        left: -240px;
+        position: fixed;
+        transform: translate3d(-240,0,0);
+        transition: all 300ms ease;
+      }
+
+      #sidebar.active{
+        left: 0px;
+      }
+
+      #sidebar .toggle-btn{
+        position: fixed;
+        left: 240px;
+        top: 75px;
+        z-index: 100;
+
+      }
+      
+      #sidebar .toggle-btn span{
+        display: block;
+        width: 20px;
+        height: 4px;
+        background: #151719;
+        margin: 5px 0px;
+
+      }
+      .content{
+        transition: transform 300ms ease;
+      }
+      .content.active{
+        transform: translate3d(240,0,0);
+      }
+      .pic-logo_admin{
+        margin-top: 5px;
+      }
+
